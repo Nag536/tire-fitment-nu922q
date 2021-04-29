@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-6">
+    <button (click)="getYears()" class="btn btn-secondary"> Select vehicle </button>
+    <form class="fitment">
+      <div class="form-group form-inline">
+        <label for="year" class="col-md-4">Year</label>
+        <select formControlName="year" class="form-control col-md-8" (change)="onChangeYear($event)">
+          <option value="">Select year...</option>
+          <option *ngFor="let year of years$" [value]="year">{{year}}</option>
+        </select>
+      </div>
+      <div class="form-group form-inline">
+        <label for="year" class="col-md-4">Make</label>
+        <select formControlName="make" class="form-control col-md-8" (change)="onChangeMake($event)">
+          <option value="">Select make...</option>
+          <option *ngFor="let make of makes$" [value]="make">{{make}}</option>
+        </select>
+      </div>
+      <div class="form-group form-inline">
+        <label for="year" class="col-md-4">Model</label>
+        <select formControlName="model" class="form-control col-md-8" (change)="onChangeModel($event)">
+          <option value="">Select model...</option>
+          <option *ngFor="let model of models$" [value]="model">{{model}}</option>
+        </select>
+      </div>
+      <div class="form-group form-inline">
+        <label for="year" class="col-md-4">Trim</label>
+        <select formControlName="trim" class="form-control col-md-8" (change)="onChangeTrim($event)">
+          <option value="">Select trim...</option>
+          <option *ngFor="let trim of trims$" [value]="trim">{{trim}}</option>
+        </select>
+      </div>
+    </form>
+  </div>
+</div>
